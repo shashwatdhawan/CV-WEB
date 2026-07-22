@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Cloudverse logo mark</title>
+  <desc id="desc">A square Cloudverse placeholder logo with a glowing cloud and CV letters.</desc>
+  <defs>
+    <linearGradient id="bg" x1="64" y1="48" x2="448" y2="464" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07142f"/>
+      <stop offset=".48" stop-color="#102769"/>
+      <stop offset="1" stop-color="#15102e"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="94" y1="72" x2="418" y2="440" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#48d7ff"/>
+      <stop offset=".58" stop-color="#8b5cff"/>
+      <stop offset="1" stop-color="#35f2ba"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect x="34" y="34" width="444" height="444" rx="92" fill="url(#bg)"/>
+  <rect x="48" y="48" width="416" height="416" rx="78" fill="none" stroke="url(#edge)" stroke-width="8"/>
+  <path d="M164 280h188c40 0 72-28 72-66 0-36-28-64-65-66-15-38-52-64-96-64-51 0-93 35-102 82h-7c-43 0-78 31-78 70s37 44 88 44Z" fill="#eaf8ff" filter="url(#glow)"/>
+  <path d="M164 280h188c40 0 72-28 72-66 0-36-28-64-65-66-15-38-52-64-96-64-51 0-93 35-102 82h-7c-43 0-78 31-78 70s37 44 88 44Z" fill="#bcecff"/>
+  <text x="256" y="380" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="92" font-weight="900" fill="#ffffff" letter-spacing="-8">CV</text>
+</svg>
