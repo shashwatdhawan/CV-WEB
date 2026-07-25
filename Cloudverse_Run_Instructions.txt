@@ -1,0 +1,52 @@
+Cloudverse Store - Run Instructions
+
+1. Install packages when you first open the project, or when requirements.txt changes:
+
+   pip install -r requirements.txt
+
+2. Start the website:
+
+   python -m uvicorn backend.main:app --reload
+
+3. Open the website:
+
+   http://127.0.0.1:8000
+
+4. Your .env file should contain:
+
+   DISCORD_CLIENT_ID=your_client_id
+   DISCORD_CLIENT_SECRET=your_client_secret
+   DISCORD_REDIRECT_URI=http://127.0.0.1:8000/auth/callback
+   SESSION_SECRET=your_long_random_session_secret
+   ADMIN_SETUP_CODE=jassibhaiilassipeetahai2rskifirhagtehai4baar
+   BOT_API_SECRET=your_long_private_bot_secret
+   WEBSITE_BOT_URL=https://your-bot-name.up.railway.app
+   WEBSITE_TICKET_SECRET=your_long_private_ticket_secret
+
+5. Discord bot integration:
+
+   Your Python Discord bot should send this header when calling internal endpoints:
+
+   X-Bot-Api-Secret: your_long_private_bot_secret
+
+   For checkout-created Discord tickets, your website sends orders to:
+
+   WEBSITE_BOT_URL + /website/order-ticket
+
+   The website and bot must both use the same WEBSITE_TICKET_SECRET.
+
+   Useful internal endpoints:
+
+   GET  /internal/bot/validate
+   POST /internal/orders/new
+   GET  /internal/orders/{order_id}
+   GET  /internal/orders/{order_id}/ticket-payload
+   PUT  /internal/orders/{order_id}/status
+   GET  /internal/orders/{order_id}/customer
+   GET  /internal/orders/{order_id}/items
+
+6. Admin access:
+
+   Login with Discord first.
+   Put the one-time admin setup code into the normal cart coupon box.
+   After it works, the Admin link becomes visible only for admin users.
