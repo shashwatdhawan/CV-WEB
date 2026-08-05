@@ -1,0 +1,152 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cloudverse Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css?v=profile-1">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Cloudverse home">
+      <img class="brand-logo" src="/static/assets/brand/cloudverse-logo-small.png?v=hero-logo-small-3" alt="Cloudverse logo">
+      <span>Cloudverse</span>
+    </a>
+    <button class="menu-button" id="menuButton" type="button" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav-center" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/#products">Store</a>
+      <a href="https://discord.gg/8ZucR4fXkk" target="_blank" rel="noreferrer">Discord</a>
+      <a id="adminNav" href="/admin" hidden>Admin</a>
+    </nav>
+    <div class="top-actions">
+      <div class="auth-menu" id="authMenu">
+        <a class="login-button" id="loginButton" href="/login" hidden>Login with Discord</a>
+        <button class="user-button" id="userButton" type="button" aria-expanded="false">
+          <img id="userAvatar" src="" alt="">
+          <span id="userName">Player</span>
+          <span class="dropdown-caret" aria-hidden="true"></span>
+        </button>
+        <div class="user-dropdown" id="userDropdown" hidden>
+          <a href="/profile">My Profile</a>
+          <a href="/orders">Orders</a>
+          <a href="#" data-account-action="settings">Settings <span>Coming Soon</span></a>
+          <a href="/logout">Logout</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="profile-shell">
+    <section class="profile-hero">
+      <div class="profile-identity">
+        <img id="profileAvatar" class="profile-avatar" src="" alt="">
+        <div>
+          <p class="eyebrow">Cloudverse Account</p>
+          <h1 id="profileDisplayName">Loading...</h1>
+          <p id="profileUsername" class="profile-muted"></p>
+        </div>
+      </div>
+      <div class="profile-stat-row">
+        <article>
+          <span>Orders</span>
+          <strong id="profileOrders">0</strong>
+        </article>
+        <article>
+          <span>Purchases</span>
+          <strong id="profilePurchases">0</strong>
+        </article>
+        <article>
+          <span>Money Spent</span>
+          <strong id="profileSpent">Rs. 0</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="profile-grid">
+      <article class="profile-panel">
+        <div class="panel-head">
+          <p class="panel-label">Discord</p>
+          <h2>Profile Details</h2>
+        </div>
+        <dl class="detail-list">
+          <div>
+            <dt>Display Name</dt>
+            <dd id="detailDisplayName">-</dd>
+          </div>
+          <div>
+            <dt>Discord Username</dt>
+            <dd id="detailDiscordUsername">-</dd>
+          </div>
+          <div>
+            <dt>Discord ID</dt>
+            <dd id="detailDiscordId">-</dd>
+          </div>
+          <div>
+            <dt>Joined Website</dt>
+            <dd id="detailJoined">-</dd>
+          </div>
+          <div>
+            <dt>Last Login</dt>
+            <dd id="detailLastLogin">-</dd>
+          </div>
+        </dl>
+      </article>
+
+      <article class="profile-panel minecraft-panel">
+        <div class="panel-head">
+          <p class="panel-label">Minecraft</p>
+          <h2>Linked Account</h2>
+        </div>
+        <div class="minecraft-card" id="minecraftCard">
+          <div class="minecraft-head-frame">
+            <img id="minecraftHead" src="/static/assets/brand/cloudverse-logo-small.png?v=hero-logo-small-3" alt="">
+          </div>
+          <div>
+            <strong id="minecraftIgn">No account linked</strong>
+            <span id="minecraftType">Choose Premium or Cracked when linking.</span>
+            <span id="minecraftUuid">Link one Minecraft account to your Cloudverse profile.</span>
+          </div>
+        </div>
+        <form class="minecraft-form" id="minecraftForm">
+          <label for="minecraftInput">Minecraft IGN</label>
+          <div class="account-type-row">
+            <label>
+              <input type="radio" name="accountType" value="premium" checked>
+              Premium
+            </label>
+            <label>
+              <input type="radio" name="accountType" value="cracked">
+              Cracked
+            </label>
+          </div>
+          <div>
+            <input id="minecraftInput" name="ign" type="text" maxlength="16" placeholder="Enter IGN" autocomplete="off">
+            <button class="primary-action" type="submit">Link Account</button>
+          </div>
+          <p id="minecraftMessage" aria-live="polite"></p>
+        </form>
+      </article>
+    </section>
+
+    <section class="future-grid">
+      <article><h3>Orders</h3><p><a href="/orders">View Order History</a></p></article>
+      <article><h3>Purchase History</h3><p>Coming Soon</p></article>
+      <article><h3>Coupons</h3><p>Coming Soon</p></article>
+      <article><h3>Licenses</h3><p>Coming Soon</p></article>
+      <article><h3>Support Tickets</h3><p>Coming Soon</p></article>
+      <article><h3>Server Statistics</h3><p>Coming Soon</p></article>
+    </section>
+  </main>
+
+  <script src="/static/profile.js?v=profile-1"></script>
+</body>
+</html>
+
