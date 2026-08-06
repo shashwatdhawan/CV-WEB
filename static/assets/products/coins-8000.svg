@@ -1,0 +1,16 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="35%" r="70%"><stop offset="0" stop-color="#17365a"/><stop offset=".56" stop-color="#071424"/><stop offset="1" stop-color="#040710"/></radialGradient>
+    <linearGradient id="coin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff3a4"/><stop offset=".5" stop-color="#f4bd22"/><stop offset="1" stop-color="#b36a00"/></linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="0" stdDeviation="14" flood-color="#00b7ff" flood-opacity=".65"/><feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000" flood-opacity=".62"/></filter>
+  </defs>
+  <rect width="900" height="620" rx="42" fill="url(#bg)"/>
+  <rect x="38" y="38" width="824" height="544" rx="36" fill="rgba(255,255,255,.045)" stroke="#00b7ff" stroke-opacity=".55" stroke-width="5"/>
+  <path d="M172 118l16 35 38 10-38 10-16 35-16-35-38-10 38-10zM724 92l12 27 30 8-30 8-12 27-12-27-30-8 30-8z" fill="#d7fff8" opacity=".9"/>
+    <g transform="translate(450 315)" filter="url(#glow)">
+      <path d="M-230 0h460v160c0 24-19 43-43 43h-374c-24 0-43-19-43-43z" fill="#7d4315" stroke="#ffd15c" stroke-width="11"/>
+      <path d="M-212-104c60-76 364-76 424 0v112h-424z" fill="#a96620" stroke="#ffd15c" stroke-width="11"/>
+      <g><circle cx="-150" cy="-30" r="35" fill="url(#coin)"/><circle cx="-96" cy="-64" r="38" fill="url(#coin)"/><circle cx="-35" cy="-56" r="43" fill="url(#coin)"/><circle cx="35" cy="-65" r="41" fill="url(#coin)"/><circle cx="98" cy="-52" r="38" fill="url(#coin)"/><circle cx="152" cy="-22" r="35" fill="url(#coin)"/><circle cx="-4" cy="-10" r="48" fill="url(#coin)"/></g>
+      <rect x="-46" y="-10" width="92" height="78" rx="10" fill="#f7c84f" stroke="#6d3e12" stroke-width="7"/>
+    </g>
+</svg>

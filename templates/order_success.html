@@ -1,0 +1,68 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cloudverse Order Created</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css?v=cloudverse-home-order-2">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><img class="brand-logo" src="/static/assets/brand/cloudverse-logo-small.png" alt=""><span>Cloudverse</span></a>
+    <nav class="nav-center"><a href="/">Home</a><a href="/orders">Orders</a></nav>
+    <div class="top-actions"><a class="cart-button" href="/profile">Profile</a></div>
+  </header>
+  <main class="profile-shell order-success-shell">
+    <section class="profile-hero order-success-hero">
+      <div>
+        <div class="success-checkmark" aria-hidden="true">âœ“</div>
+        <p class="eyebrow">Order Created</p>
+        <h1>Order Created Successfully</h1>
+        <p class="profile-muted">Thank you for your purchase! Your order has been successfully created. Our staff will complete your purchase inside your private Discord ticket.</p>
+      </div>
+    </section>
+
+    <section class="profile-grid">
+      <article class="profile-panel">
+        <div class="panel-head">
+          <p class="panel-label">Order Information</p>
+          <h2 id="successOrderId">Loading...</h2>
+        </div>
+        <div class="detail-list">
+          <div><span>Order ID</span><strong id="successDetailOrderId">-</strong></div>
+          <div><span>Status</span><strong id="successStatus">-</strong></div>
+          <div><span>Minecraft Username</span><strong id="successMinecraft">-</strong></div>
+          <div><span>Discord Username</span><strong id="successDiscord">-</strong></div>
+          <div><span>Total Paid</span><strong id="successTotal">-</strong></div>
+        </div>
+      </article>
+
+      <article class="profile-panel">
+        <div class="panel-head">
+          <p class="panel-label">Next Step</p>
+          <h2>Open Your Discord Ticket</h2>
+        </div>
+        <ol class="next-step-list">
+          <li>Open your Discord ticket.</li>
+          <li>Wait for a staff member.</li>
+          <li>Complete payment inside the ticket.</li>
+          <li>Your purchase will be delivered after confirmation.</li>
+        </ol>
+        <button class="primary-action" id="openTicketButton" type="button" disabled>Ticket is still being created...</button>
+        <button class="ghost-action" id="refreshOrderButton" type="button">Refresh Status</button>
+        <p id="successMessage" class="profile-muted"></p>
+      </article>
+    </section>
+
+    <section class="profile-panel">
+      <h2>Purchased Items</h2>
+      <div class="orders-list" id="successItems"></div>
+    </section>
+  </main>
+  <script src="/static/order-success.js?v=cloudverse-home-order-2"></script>
+</body>
+</html>
+
